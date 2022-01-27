@@ -25,6 +25,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           showLastUpdateTime: true,
+          showLastUpdateAuthor: true,
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
@@ -61,19 +62,9 @@ const config = {
 
         // Public API key: it is safe to commit it
         apiKey: "a38b9f9487cdede5e1cf7097a5b4e5a3",
-
         indexName: "flatifycss",
-
-        // Optional: see doc section below
-        contextualSearch: true,
-
-        // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
-        externalUrlRegex: "external\\.com|domain\\.com",
-
-        // Optional: Algolia search parameters
+        contextualSearch: false,
         searchParameters: {},
-
-        //... other Algolia params
       },
       footer: {
         copyright: `Created with ❤️ by FlatifyCSS's team and its contributors.`,
