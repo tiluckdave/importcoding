@@ -37,10 +37,10 @@ const config = {
     (
       {
         navbar: {
-          title: "FlatifyCSS",
+          title: "CodeAwesome",
           hideOnScroll: true,
           logo: {
-            alt: "FlatifyCSS logo",
+            alt: "CodeAwesome logo",
             src: "img/logo.svg",
           },
           items: [
