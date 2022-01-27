@@ -28,9 +28,8 @@
   --ifm-footer-background-color: #141f23;
 }
 
-html:not(.docs-version-current) .footer {
-  color: #fff !important;
-}
+
+
 .docs-version-current .footer {
   --ifm-footer-background-color: var(--flatify__bg-color);
   border-top: var(--docus-bd);
@@ -457,4 +456,13 @@ button.copyButton_node_modules-\@docusaurus-theme-classic-lib-next-theme-CodeBlo
   .blog-list-page article[itemprop="blogPost"] header div[class*="blogPostData"] {
     order: 7;
   }
+}
+
+.footer {
+  background: none !important;
+  border-top: var(--docus-bd) !important;
+  color: var(--ifm-footer-background-color) !important;
+}
+html[data-theme="dark"] .footer {
+  color: var(--flatify__txt-color) !important;
 }
