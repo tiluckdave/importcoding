@@ -6,8 +6,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /* @type { import('@docusaurus/types').Config } */
 const config = {
-  title: "FlatifyCSS",
-  tagline: "Modern Flat Design Framework",
+  title: "CodeAwesome",
+  tagline: "A curated list of awesome code snippets",
   favicon: "img/favicon.ico",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
