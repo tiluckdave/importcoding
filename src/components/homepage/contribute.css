@@ -1,0 +1,140 @@
+.homepage-contribute {
+  overflow: hidden;
+  position: relative;
+  padding: 0 3em 21em;
+  margin-top: 5em;
+  isolation: isolate;
+}
+
+.homepage-contribute:after,
+.homepage-contribute:before {
+  content: " ";
+  position: absolute;
+  bottom: -5%;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: #1895d0;
+  border-radius: 50em 50em 0 0;
+  animation: floating-fx ease 5s infinite;
+  opacity: 0.07;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .homepage-contribute:after {
+    bottom: -10%;
+  }
+  .homepage-contribute:after,
+  .homepage-contribute:before {
+    animation: floating-fx-reduced ease 3s infinite !important;
+  }
+}
+
+@keyframes floating-fx-reduced {
+  0% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.07;
+  }
+  100% {
+    opacity: 0.4;
+  }
+}
+
+.homepage-contribute:before {
+  right: 3%;
+}
+
+.homepage-contribute:after {
+  left: 3%;
+  animation-duration: 6s;
+  animation-direction: reverse;
+}
+
+@keyframes floating-fx {
+  0% {
+    transform: translateY(0);
+  }
+  55% {
+    transform: translateY(10%);
+  }
+}
+
+.homepage-contribute .featured-button {
+  position: relative;
+  z-index: 3;
+}
+
+.contribute-texts {
+  position: relative;
+  top: 10em;
+  font-size: 0.85em;
+}
+
+.contribute-texts .homepage-para {
+  margin-bottom: 1.5em !important;
+}
+
+.contributor-svg svg {
+  width: 18em;
+}
+
+.chain-svg svg {
+  width: 13em;
+}
+
+.contribute-icons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 95%;
+  padding-bottom: 1em;
+  margin: 0 auto;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .contribute-button {
+    --flatify__two-layer-button-animation-show: flatify-slide-up-in 0.3s 0.1s;
+  }
+
+  .donate-button {
+    --flatify__two-layer-button-animation-show: flatify-slide-down-in 0.3s 0.1s;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .homepage-contribute .featured-button {
+    font-size: 1.85em !important;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .contribute-icons {
+    font-size: 0.85em;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contribute-icons {
+    font-size: 0.85em;
+  }
+  .contribute-icons {
+    opacity: 0.3;
+  }
+}
+@media screen and (max-width: 575px) {
+  .homepage-contribute {
+    padding-bottom: 12em;
+  }
+  .contribute-icons {
+    font-size: 0.5em;
+  }
+  .contribute-texts .flex-center {
+    flex-direction: column;
+  }
+  .featured-button {
+    margin-top: 1em;
+  }
+}

@@ -1,0 +1,95 @@
+---
+title: Introduction
+sidebar_position: 1
+---
+
+import PreviewBox from "../src/components/preview-box";
+import HomepageFeatures from "../src/components/homepage/features";
+import { features_horizontal } from "../src/data/features-list";
+
+<p className="size-lg weight-medium">
+  FlatifyCSS is the web modern and minimalist flat design library inspired by
+  the
+  <a href="https://design.duolingo.com/" rel="nofollow" target="_blank">
+    &nbsp; Duolingo design system
+  </a>. It respects accessibility and comes with the web's most common components
+</p>
+
+## Getting started
+
+When we talk about flat design, you might think about the creepy palette and some old-fashioned web trends, but no, flat design is a wide term and in this case for FlatifyCSS, there are some principles that shape it clearly you will understand it easily.
+
+<HomepageFeatures items={features_horizontal} isSmall={true} />
+
+## Download
+
+FlatifyCSS is available for users in many ways, you can install it using package managers, directly from CDN, or even downloading [lastest project archive](https://github.com/amir2mi/flatifycss/archive/master.zip).
+
+### CDN
+
+Here is [jsDelivr](https://www.jsdelivr.com/), you can add FlatifyCSS just with a single line of code:
+
+```html title="index.html"
+<!-- CSS -->
+<link
+  href="https://cdn.jsdelivr.net/npm/flatifycss/dist/css/flatify.min.css"
+  rel="stylesheet"
+  crossorigin="anonymous"
+/>
+
+<!-- JavaScript : Popperjs + FlatifyCSS -->
+<script
+  src="https://unpkg.com/@popperjs/core@2"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/flatifycss/dist/js/flatify.min.js"
+  crossorigin="anonymous"
+></script>
+```
+
+### Package managers
+
+You can include FlatifyCSS in your project with npm, yarn or composer:
+
+#### npm
+
+```bash title="command line"
+npm install flatifycss
+```
+
+#### Yarn
+
+```bash title="command line"
+yarn add flatifycss
+```
+
+#### Composer
+
+```bash title="command line"
+composer require amir2mi/flatifycss
+```
+
+## Contents
+
+After installing FlatifyCSS with package managers or downloading the archive file there is a folder called `/dist`, where compiled CSS, JS and their map files are there, inside this folder these files are provided:
+
+### CSS
+
+CSS files come with some options, files with `-noprefix` suffix, do not have [PostCSS Autoprefixer](https://github.com/postcss/autoprefixer), while `-min` means this file is minified and `-rtl` is the special file for languages like Arabic, Persian, Hebrew, etc which direction is right to left.
+
+`flatify.css`  
+`flatify-min.css`  
+`flatify-noprefix.css`  
+`flatify-noprefix-min.css`  
+`flatify-rtl.css`  
+`flatify-rtl-min.css`  
+`flatify-rtl-noprefix.css`  
+`flatify-rtl-noprefix-min.css`
+
+### JS
+
+Note that FlatifyCSS needs [Popperjs](https://popper.js.org/) for dropdowns and popovers, but this library is not included inside the JavaScript file of FlatifyCSS, so it is up to you to include it inside your webpage.
+
+`flatify.js`  
+`flatify-min.js`
