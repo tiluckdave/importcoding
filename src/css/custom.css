@@ -17,7 +17,7 @@
   --ifm-color-primary-lighter: #47bff8;
   --ifm-color-primary-lightest: #70cdf9;
   --ifm-code-font-size: 95%;
-  --docus-bd: 2px solid #ced9e3;
+  --docus-bd: 1.5px solid #ced9e3;
   --ifm-spacing-horizontal: 1.5em;
   --ifm-heading-font-family: var(--flatify__primary-font-family);
   --ifm-global-shadow-lw: none;
@@ -37,7 +37,7 @@ html:not(.docs-version-current) .footer {
 }
 
 html[data-theme="dark"] {
-  --docus-bd: 2px solid #2e4051;
+  --docus-bd: 1.5px solid #2e4051;
   --ifm-background-surface-color: #141f23;
   --ifm-background-color: #141f23;
   --flatify__bg-color: #141f23;
