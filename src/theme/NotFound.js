@@ -19,24 +19,17 @@ function NotFound() {
     >
       <main className="container margin-vert--xl">
         <div className="row text-center">
-          <div className="col col--6 col--offset-3" style={{paddingTop: '3em'}}>
-            <h1 className="hero__title size-5x">
-              <Translate id="theme.NotFound.title" description="The title of the 404 page">
-                Page Not Found
-              </Translate>
+          <div className="col col--6 col--offset-3" style={{ paddingTop: '4em' }}>
+            <h1 className="hero__title size-2x">
+              404 Not Found
             </h1>
-            <p className="homepage-subtitle size-lg">
-              <Translate id="theme.NotFound.p1" description="The first paragraph of the 404 page">
-                We could not find what you were looking for.
-              </Translate>
+            <p className="homepage-subtitle">
+              We could not find what you were looking for.
             </p>
             <Link
               to="/"
-              className={`get-started-button button bordered size-lg style-light color-dark-light`}
-            >
-              <Translate id="theme.NotFound.button" description="The button text of the 404 page">
-                Go to homepage
-              </Translate>
+              className={`button button--primary margin-horiz--xl`}
+            > Go To Homepage
             </Link>
           </div>
         </div>

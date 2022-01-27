@@ -74,22 +74,22 @@ div[class*="codeBlockTitle_"],
 .codeBlockTitle_node_modules-\@docusaurus-theme-classic-lib-next-theme-CodeBlock-styles-module {
   border: var(--docus-bd) !important;
   border-bottom: none !important;
-  border-radius: 1em 1em 0 0;
+  border-radius: 0.5em 0.5em 0 0;
 }
 
 .codeBlockTitle_node_modules-\@docusaurus-theme-classic-lib-next-theme-CodeBlock-styles-module
   + .codeBlockContent_node_modules-\@docusaurus-theme-classic-lib-next-theme-CodeBlock-styles-module
   pre.prism-code {
-  border-radius: 0 0 1em 1em;
+  border-radius: 0 0 0.5em 0.5em;
 }
 
 .prism-code.thin-scrollbar {
-  border-radius: 0 0 1em 1em;
+  border-radius: 0 0 0.5em 0.5em;
 }
 
 .pagination-nav__link {
   border: var(--docus-bd);
-  border-radius: 1em;
+  border-radius: 0.5em;
 }
 
 /* @media screen and (min-width: 997px) {
@@ -190,7 +190,9 @@ div[class*="toggleTrack_"],
   font-size: 0.8em !important;
   padding: 0.5em 0.85em !important;
 }
-
+button.copyButton_node_modules-\@docusaurus-theme-classic-lib-next-theme-CodeBlock-styles-module.clean-btn {
+  color: var(--ifm-color-primary) !important;
+}
 .clean-btn.theme-back-to-top-button {
   background: var(--flatify__bg-color-dark) !important;
   padding: 0 !important;
@@ -284,7 +286,6 @@ div[class*="toggleTrack_"],
 
 .navbar__inner div[class*="toggleTrack_"] * {
   background: transparent;
-  background-image: url('https://starpng.com/public/uploads/preview/sun-png-14-11583909735uxheleo3ir.png');
 }
 .navbar__inner div[class*="toggleTrack"] {
   top: 0;
@@ -379,12 +380,7 @@ div[class*="toggleTrack_"],
     font-size: 0.9em;
   }
 }
-.menu__list .menu__list {
-  border-left: var(--docus-bd);
-  border-bottom: var(--docus-bd);
-  border-bottom-color: transparent !important;
-  border-radius: 0 0 0 20px;
-}
+
 .menu__list .menu__list a {
   margin-left: 0.75em;
   font-size: 0.9em;
