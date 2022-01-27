@@ -30,10 +30,6 @@
 
 
 
-.docs-version-current .footer {
-  --ifm-footer-background-color: var(--flatify__bg-color);
-  border-top: var(--docus-bd);
-}
 
 html[data-theme="dark"] {
   --docus-bd: 1.5px solid #2e4051;
