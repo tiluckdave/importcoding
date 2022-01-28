@@ -4,51 +4,41 @@
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
-/* @type { import('@docusaurus/types').Config } */
+/** @type { import('@docusaurus/types').Config } */
+
 const config = {
-  title: "CodeAwesome",
-  tagline: "A curated list of awesome code snippets",
+  title: "Import Coding",
+  tagline: "Helping you import coding to your life!",
   favicon: "img/favicon.ico",
-  onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  onBrokenLinks: "log",
+  onBrokenMarkdownLinks: "log",
   url: "https://flatifycss.com",
   baseUrl: "/",
   // organizationName: "amir2mi", // Usually your GitHub org/user name.
   // projectName: "flatifycss", // Usually your repo name.
   trailingSlash: false,
-  presets: [
-    [
-      "@docusaurus/preset-classic",
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
-        docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
-          showLastUpdateTime: true,
-          showLastUpdateAuthor: true,
-        },
-        theme: {
-          customCss: require.resolve("./src/css/custom.css"),
-        },
-      }),
-    ],
-  ],
+
 
   themeConfig:
     (
       {
         navbar: {
-          title: "CodeAwesome",
-          hideOnScroll: true,
+          title: "Import Coding",
+          hideOnScroll: false,
           logo: {
-            alt: "CodeAwesome logo",
+            alt: "Import Coding Logo",
             src: "img/logo.svg",
           },
           items: [
             {
-              type: "doc",
-              docId: "intro",
+              href: "https://twitter.com/tiluckdave",
               position: "left",
-              label: "Documentation",
+              label: "Twitter",
+            },
+            {
+              href: "https://github.com/tiluckdave",
+              position: "left",
+              label: "GitHub",
             },
           ],
         },
@@ -76,6 +66,29 @@ const config = {
           copyright: `Created with ❤️ by Tilak Dave from 🇮🇳.`,
         },
       }),
+  presets: [
+    [
+      "@docusaurus/preset-classic",
+      {
+        docs: {
+          path: './projects/analog-clock',
+          routeBasePath: 'projects/analog-clock',
+          sidebarPath: require.resolve('./projects/analog-clock/sidebars.js'),
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
+        },
+        theme: {
+          customCss: require.resolve("./src/css/custom.css"),
+        },
+        sitemap: {
+          changefreq: 'daily',
+          priority: 0.5,
+        },
+      },
+    ],
+  ],
+  plugins: [
+  ],
 };
 
 module.exports = config;

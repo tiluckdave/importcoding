@@ -28,8 +28,30 @@
   --ifm-footer-background-color: #141f23;
 }
 
+.smalllang {
+  font-size: 0.8em;
+  color: var(--ifm-color-primary-dark);
+}
 
+.projectCard {
+  border: var(--docus-bd);
+  padding: 12px;
+  margin: 12px;
+  border-radius: 0.5em;
+  max-width: 150px;
+}
 
+.projectBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+ul.tabs {
+  align-items: center;
+  justify-content: center;
+}
 
 html[data-theme="dark"] {
   --docus-bd: 1.5px solid #2e4051;

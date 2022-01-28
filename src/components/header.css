@@ -1,0 +1,21 @@
+ 
+  
+.homepage-header {
+  isolation: isolate;
+  position: relative;
+  text-align: center;
+  background: var(--flatify__bg-color);
+}
+  
+.homepage-title {
+  font-size: 5em;
+  font-weight: bold;
+}
+
+.homepage-subtitle {
+  font-size: 1.5em;
+  opacity: 0.8;
+}
+  
+  
+  
