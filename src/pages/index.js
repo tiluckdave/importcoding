@@ -46,9 +46,9 @@ export default function Home() {
             <Tabs className="alitmcjcc">
               <TabItem value="projects" label="Projects">
                 <div id="projects" className="projectBox">
-                  <ProjectCard title="Email Extractor" language="JavaScript" link="analog-clock/setup" />
+                  {/* <ProjectCard title="Email Extractor" language="JavaScript" link="analog-clock/setup" />
                   <ProjectCard title="Standard Calculator" language="JavaScript" link="analog-clock/setup" />
-                  <ProjectCard title="Tic Tac Toe Game" language="Java" link="analog-clock/setup" />
+                  <ProjectCard title="Tic Tac Toe Game" language="Java" link="analog-clock/setup" /> */}
                   <ProjectCard title="Analog Clock" language="JavaScript" link="analog-clock/setup" />
                 </div>
               </TabItem>

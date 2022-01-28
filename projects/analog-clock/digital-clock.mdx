@@ -1,0 +1,161 @@
+---
+title: Digital Clock
+---
+
+# Digital Clock
+
+To add the digital clock functionality follow along with this chapter.
+
+## HTML
+
+To show the digital clock we will need to add new lines to our `index.html` file. Add the highlighted code in the `body` section of our `index.html` file.
+
+```html title="index.html" {23-28}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Analog Clock</title>
+  </head>
+  <body>
+    <div class="clock">
+      <div class="hour">
+        <div class="hr" id="hr"></div>
+      </div>
+      <div class="min">
+        <div class="mn" id="mn"></div>
+      </div>
+      <div class="sec">
+        <div class="sc" id="sc"></div>
+      </div>
+    </div>
+
+    <div id="digitalClock">
+        <div id="hour"></div>
+        <div id="minutes"></div>
+        <div id="seconds"></div>
+        <div id="ampm"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+```
+- We have just added a `div` with four different fields for hour, minutes, seconds and AM/PM
+
+## Styling
+
+Let us quickly add styling to make the digital clock look good. Append the below code to our `style.css` file.
+
+```css title="style.css"
+#digitalClock {
+    display: flex;
+    color: #fff;
+    font-size: 3em;
+    margin-top: 20px;
+}
+#seconds {
+    color: #2196f3;
+} 
+```
+
+## JavaScript
+
+- To change the text we will first select the elements with their respective IDs.
+- In the `setInterval` method we will add the below highlighted code.
+
+```js title="script.js" {15-18}
+const hr = document.querySelector('#hr');
+const mn = document.querySelector('#mn');
+const sc = document.querySelector('#sc');
+
+setInterval(() => {
+    let now = new Date();
+    let hh = now.getHours();
+    let mm = now.getMinutes();
+    let ss = now.getSeconds();
+
+    hr.style.transform = `rotateZ(${hh + (mm / 12)}deg)`;
+    mn.style.transform = `rotateZ(${mm}deg)`;
+    sc.style.transform = `rotateZ(${ss}deg)`; 
+    
+    let hour = document.querySelector('#hour');
+    let minutes = document.querySelector('#minutes');
+    let seconds = document.querySelector('#seconds');
+    let ampm = document.querySelector('#ampm');
+}, 1000);
+```
+
+- Nextup we need to check if hours are greater than 12 and if so we need to change the AM/PM text.
+
+```js
+if (hh > 12) {
+    ampm.innerHTML = 'PM';
+} else {
+    ampm.innerHTML = 'AM';
+}
+```
+
+We will use this simple code snippet to calculate that!
+
+- Next, we need to check if hours, minutes or seconds are less than 10 and if so we need to add a 0 in front of them to maintain the double digit system.
+
+```js
+let h = (hh < 10) ? "0" + hh : hh
+let m = (mm < 10) ? "0" + mm : mm
+let s = (ss < 10) ? "0" + ss : ss
+```
+
+This simple snippet helps us do that using ternary operators.
+
+- Lastly we will add the calculated fields to the HTML.
+
+```js
+hour.innerHTML = h + ":";
+minutes.innerHTML = m + ":";
+seconds.innerHTML = s + "&nbsp;";
+```
+
+The above code adds the hour, minute and seconds to the code and also includes a `:` after the hour and the minute field.
+
+- The complete `script.js` should now look like this.
+
+```js title="script.js"
+const hr = document.querySelector('#hr');
+const mn = document.querySelector('#mn');
+const sc = document.querySelector('#sc');
+
+setInterval(() => {
+    let now = new Date();
+    let hh = now.getHours();
+    let mm = now.getMinutes();
+    let ss = now.getSeconds();
+
+    hr.style.transform = `rotateZ(${hh + (mm / 12)}deg)`;
+    mn.style.transform = `rotateZ(${mm}deg)`;
+    sc.style.transform = `rotateZ(${ss}deg)`; 
+    
+    let hour = document.querySelector('#hour');
+    let minutes = document.querySelector('#minutes');
+    let seconds = document.querySelector('#seconds');
+    let ampm = document.querySelector('#ampm');
+
+    if (hh > 12) {
+        ampm.innerHTML = 'PM';
+    } else {
+        ampm.innerHTML = 'AM';
+    }
+
+    let h = (hh < 10) ? "0" + hh : hh
+    let m = (mm < 10) ? "0" + mm : mm
+    let s = (ss < 10) ? "0" + ss : ss
+
+    hour.innerHTML = h + ":";
+    minutes.innerHTML = m + ":";
+    seconds.innerHTML = s + "&nbsp;";
+}, 1000);
+```
+
+Done, Lets conclude the project in the next chapter!

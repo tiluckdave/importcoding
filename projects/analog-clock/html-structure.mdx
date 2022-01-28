@@ -1,0 +1,116 @@
+---
+title: HTML Structure
+---
+
+# HTML Structure
+
+Let us now setup the HTML structure of our application.
+
+## Bolerplate Code
+
+- Open the `index.html` file and paste the below boiler plate code.
+
+```html title="index.html"
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Analog Clock</title>
+  </head>
+  <body></body>
+</html>
+```
+
+## Link CSS and JS
+
+- Now let us link the `style.css` and `script.js` files. For that add the two highlighted lines in your `index.html` file.
+
+```html title="index.html" {7,11}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Analog Clock</title>
+  </head>
+  <body>
+    <script src="script.js"></script>
+  </body>
+</html>
+```
+
+## Clock and Space for Hands
+
+- Lets create the structure of clock.
+
+A `div` with class `clock` will act as a container for the analog clock. We will create three more `div`s with class `hour`, `min` and `sec` inside the `clock` div which will act as the space for the hands
+
+:::info
+- The `div` with class `hour` will act as the space for the hour hand. The actual hour hand will rotate within this space.
+- The `div` with class `min` will act as the space for the minute hand. The actual minute hand will rotate within this space.
+- The `div` with class `sec` will act as the space for the second hand.The actual second hand will rotate within this space.
+:::
+
+- Let us insert the code in the `body` tag.
+
+```html title="index.html" {11-15}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Analog Clock</title>
+  </head>
+  <body>
+    <div class="clock">
+      <div class="hour"></div>
+      <div class="min"></div>
+      <div class="sec"></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+```
+
+## Clock Hands
+
+- Next we will create the actual `div`s for the hands.
+
+Create a `div` inside the spaces with the class and id as `hr` for the hour hand. Similarly for the minute hand and second hand with the class and id as `mn` and `sc` respectively.
+
+Now the code should look like this.
+
+```html title="index.html" {13,16,19}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Analog Clock</title>
+  </head>
+  <body>
+    <div class="clock">
+      <div class="hour">
+        <div class="hr" id="hr"></div>
+      </div>
+      <div class="min">
+        <div class="mn" id="mn"></div>
+      </div>
+      <div class="sec">
+        <div class="sc" id="sc"></div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+```
+
+Till now the webpage will show nothing as no text is written in the `body` tag. Continue with the next chapter to style our clock which will help us see the clock on our webpage.

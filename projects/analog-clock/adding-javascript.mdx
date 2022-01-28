@@ -1,0 +1,94 @@
+---
+title: Adding JavaScript
+---
+
+# Adding JavaScript
+
+Through JavaScript we will be able to rotate the hands on a specific time interval. Lets dive into it.
+
+## Selecting DOM elements
+
+We will need to select our hands in order to rotate then. For that we can use `document` object and `querySelector` method.
+
+```js title="script.js"
+const hr = document.querySelector('#hr');
+const mn = document.querySelector('#mn');
+const sc = document.querySelector('#sc');
+```
+
+## The `setInterval` function
+
+`setInterval` method takes two arguments:
+- The first argument is a function that will be executed every `1000` milliseconds.
+- The second argument is the time interval in milliseconds.
+
+Let us add the `setInterval` function to our code.
+```js title="script.js"
+setInterval(() => {
+  
+}, 1000);
+```
+
+## The `getHours`, `getMinutes`, `getSeconds` methods
+
+- We will use the `Date` object to get the current time. and then we will use the `getHours`, `getMinutes`, `getSeconds` methods to get the current time in hours, minutes and seconds.
+- We need to get this data every second and hence we will add the code inside the `setInterval` function.
+
+```js title="script.js" {2-5}
+setInterval(() => {
+    let now = new Date();
+    let hh = now.getHours();
+    let mm = now.getMinutes();
+    let ss = now.getSeconds();
+}, 1000);
+```
+
+## Rotating the hands
+
+- This is the most trickiest part. We will edit the style of the elements to rotate them.
+- `rotateZ` is a CSS property that will rotate the element around the Z axis.
+- We will give calculated `deg` value which will specify the rotation angle.
+- For hour hand the formula is `(hh + (mm/12))deg`.
+- For minute hand the formula is `(mm)deg`.
+- For second hand the formula is `(ss)deg`.
+
+Let us add the code now
+```js title="script.js" {7-9}
+setInterval(() => {
+    let now = new Date();
+    let hh = now.getHours();
+    let mm = now.getMinutes();
+    let ss = now.getSeconds();
+
+    hr.style.transform = `rotateZ(${hh + (mm / 12)}deg)`;
+    mn.style.transform = `rotateZ(${mm}deg)`;
+    sc.style.transform = `rotateZ(${ss}deg)`;   
+}, 1000);
+```
+- We are using changing the style using the `element.style` the property we are changing is `transform` and we are assigning a `rotateZ` value which takes angle as an argument. For e.g. `rotateZ(90deg)` will rotate the element by 90 degrees.
+
+## Code review
+
+Verify the code in the `script.js` file.
+```js title="script.js"
+const hr = document.querySelector('#hr');
+const mn = document.querySelector('#mn');
+const sc = document.querySelector('#sc');
+
+setInterval(() => {
+    let now = new Date();
+    let hh = now.getHours();
+    let mm = now.getMinutes();
+    let ss = now.getSeconds();
+
+    hr.style.transform = `rotateZ(${hh + (mm / 12)}deg)`;
+    mn.style.transform = `rotateZ(${mm}deg)`;
+    sc.style.transform = `rotateZ(${ss}deg)`;   
+}, 1000);
+```
+
+This is it! <br />
+Yes you heard it right, Our clock is now showing the correct time.
+
+Follow along with the next chapter to add the Digital clock.
+

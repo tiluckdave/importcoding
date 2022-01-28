@@ -1,0 +1,228 @@
+---
+title: Styling
+---
+
+# Styling
+
+In this chapter we will style out analog clock to look like the below image.
+
+![Only CSS](/img/projects/analog-clock/onlycss.png)
+
+So lets start.
+
+## Default Styling
+
+- Open `style.css` and include the below code. It is a good practice to add it everytime you style any webpage. You can consider it as the **CSS boilerplate**
+
+```css title="style.css"
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+```
+
+- We have also initialised the font-family which we will be using.
+- We need to display the clock in the center of our page. giving the below styling to the `body` tag will make the clock centered. We are also giving a background color to the body.
+
+```css title="style.css"
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #040615;
+    overflow: hidden;
+}
+```
+
+## Styling the clock
+
+- We need to style the clock. We will be using the `.clock` class to style the clock.
+- We can set `width`, `height` to 350px.
+- As we need the hands to come in the center. We will set `display` to `flex` and `justify-content` and `align-items` to `center`.
+- Lastly We will give `border` of `8px solid white` to the clock and a `border-radius` of `50%`.
+
+```css title="style.css"
+.clock {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 8px solid #fff;
+    border-radius: 50%;
+}
+```
+
+Which makes it look like this
+![Circle](/img/projects/analog-clock/circle.png)
+
+- We also need a blue colored circle to represent the clock center.
+- To draw that we can use `::before` pseudo selecter to `.clock`
+- Apply the below styles to make the small center of the clock
+
+
+```css title="style.css"
+.clock::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #2196f3;
+    z-index: 10000;
+    border-radius: 50%;
+}
+```
+
+The blue dot now looks like this
+![Circle with center Dot](/img/projects/analog-clock/circlewithdot.png)
+
+## Styling the hands
+
+- Nextup we will style the spaces for the hands.
+- We need to make their `position: absolute` and defining different `width` and `height` for hour, minute and second hands.
+
+```css title="style.css"
+.hour, .min, .sec {
+    position: absolute;
+}
+.hour, .hr {
+    width: 200px;
+    height: 200px;
+}
+.min, .mn {
+    width: 230px;
+    height: 230px;
+}
+.sec, .sc {
+    width: 250px;
+    height: 250px;
+}
+
+```
+- We have applied smallest `width` and `height` to the hour hand and biggest to the second hand.
+- We still haven't drawn the actual hands which will appear in the center of these spaces so let us make these spaces `flex` and `justify-content` and `align-items` to `center`.
+
+```css title="style.css"
+.hr, .mn, .sc {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+```
+
+- Using the `::before` pseudo selector we can draw the hands now.
+- We will use different `width` and colors so to differentiate between the hands.
+
+```css title="style.css"
+.hr::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 100px;
+    background: #fff;
+}
+.mn::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 110px;
+    background: #fff;
+}
+.sc::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 120px;
+    background: #2196f3;
+}
+```
+
+Now the clock look as expected!
+Have a look...
+![Only CSS](/img/projects/analog-clock/onlycss.png)
+
+## CSS review
+
+If your output looks different. You can verify it using the below code.
+```css title="style.css"
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: consolas;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #040615;
+    overflow: hidden;
+}
+.clock {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 8px solid #fff;
+    border-radius: 50%;
+}
+.clock::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #2196f3;
+    z-index: 10000;
+    border-radius: 50%;
+}
+.hour, .min, .sec {
+    position: absolute;
+}
+.hour, .hr {
+    width: 200px;
+    height: 200px;
+}
+.min, .mn {
+    width: 230px;
+    height: 230px;
+}
+.sec, .sc {
+    width: 250px;
+    height: 250px;
+}
+.hr, .mn, .sc {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+}
+.hr::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 100px;
+    background: #fff;
+}
+.mn::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 110px;
+    background: #fff;
+}
+.sc::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 120px;
+    background: #2196f3;
+}
+```
+
+With this the design part of Analog Clock is done. Let's make the clock functional in the next chapter where we will add JavaScript.
