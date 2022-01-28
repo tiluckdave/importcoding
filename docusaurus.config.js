@@ -22,6 +22,9 @@ const config = {
   themeConfig:
     (
       {
+        colorMode: {
+          defaultMode: "dark",
+        },
         navbar: {
           title: "Import Coding",
           hideOnScroll: false,
@@ -81,8 +84,12 @@ const config = {
           customCss: require.resolve("./src/css/custom.css"),
         },
         sitemap: {
-          changefreq: 'daily',
+          changefreq: 'always',
           priority: 0.5,
+        },
+        googleAnalytics: {
+          trackingID: 'G-18E35RFN70',
+          anonymizeIP: true,
         },
       },
     ],
