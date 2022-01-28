@@ -53,6 +53,10 @@ ul.tabs {
   justify-content: center;
 }
 
+.spaceBottom {
+  margin-bottom: 4em;
+}
+
 html[data-theme="dark"] {
   --docus-bd: 1.5px solid #2e4051;
   --ifm-background-surface-color: #141f23;

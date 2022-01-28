@@ -40,16 +40,14 @@ export default function Home() {
       description="Import Coding is a website to help you import coding to your life!"
     >
       <HomepageHeader />
-      <main>
+      <main className="spaceBottom">
         <div className="container-md">
           <center>
-            <Tabs className="alitmcjcc">
+            <Tabs>
               <TabItem value="projects" label="Projects">
                 <div id="projects" className="projectBox">
-                  {/* <ProjectCard title="Email Extractor" language="JavaScript" link="analog-clock/setup" />
-                  <ProjectCard title="Standard Calculator" language="JavaScript" link="analog-clock/setup" />
-                  <ProjectCard title="Tic Tac Toe Game" language="Java" link="analog-clock/setup" /> */}
                   <ProjectCard title="Analog Clock" language="JavaScript" link="analog-clock/setup" />
+                  <ProjectCard title="Email Extractor" language="JavaScript" link="email-extractor/setup" /> 
                 </div>
               </TabItem>
               <TabItem value="tutorials" label="Tutorials">

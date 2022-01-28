@@ -95,6 +95,17 @@ const config = {
     ],
   ],
   plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'email-extractor',
+        path: './projects/email-extractor',
+        routeBasePath: 'projects/email-extractor',
+        sidebarPath: require.resolve('./projects/email-extractor/sidebars.js'),
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+      },
+    ],
   ],
 };
 
