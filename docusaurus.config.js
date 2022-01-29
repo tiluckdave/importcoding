@@ -77,7 +77,6 @@ const config = {
           path: './projects/analog-clock',
           routeBasePath: 'projects/analog-clock',
           sidebarPath: require.resolve('./projects/analog-clock/sidebars.js'),
-          showLastUpdateAuthor: true,
           showLastUpdateTime: true,
         },
         blog: false,
