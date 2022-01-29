@@ -22,11 +22,22 @@ function HomepageHeader() {
 
 function ProjectCard(props) {
   return (
-    <div className="projectCard">
+    <div className="Card">
       <p className="smalllang">{props.language}</p>
       <h3>{props.title}</h3>
       <Link to={`projects/${props.link}`}>
         Start
+      </Link>
+    </div >
+  );
+}
+
+function TutorialCard(props) {
+  return (
+    <div className="Card">
+      <img src={`${props.icon}`} className="disabled" alt={`${props.title} Logo`} />
+      <Link>
+        {props.linkName}
       </Link>
     </div >
   );
@@ -45,14 +56,21 @@ export default function Home() {
           <center>
             <Tabs>
               <TabItem value="projects" label="Projects">
-                <div id="projects" className="projectBox">
-                  <ProjectCard title="Analog Clock" language="JavaScript" link="analog-clock/setup" />
+                <div id="projects" className="Box">
+                  <ProjectCard title="Analog + Digital Clock" language="JavaScript" link="analog-clock/setup" />
                   <ProjectCard title="Email Extractor" language="JavaScript" link="email-extractor/setup" /> 
                 </div>
               </TabItem>
               <TabItem value="tutorials" label="Tutorials">
-                <h3>Hey, We are working on this section!</h3>
-                <h4>Please check back later...</h4>
+              <div id="projects" className="Box">
+                  <TutorialCard title="HTML" icon="/img/lang-logo/html.png" linkName="Coming Soon"/>
+                  <TutorialCard title="CSS" icon="/img/lang-logo/css.png" linkName="Coming Soon"/>
+                  <TutorialCard title="JavaScript" icon="/img/lang-logo/js.png" linkName="Coming Soon"/>
+                  <TutorialCard title="Python" icon="/img/lang-logo/python.png" linkName="Coming Soon"/>
+                  <TutorialCard title="C" icon="/img/lang-logo/c.png" linkName="Coming Soon"/>
+                  <TutorialCard title="C++" icon="/img/lang-logo/c++.png" linkName="Coming Soon"/>
+                  <TutorialCard title="Java" icon="/img/lang-logo/java.png" linkName="Coming Soon"/>
+                </div>
               </TabItem>
             </Tabs>
           </center>

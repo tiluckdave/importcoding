@@ -33,15 +33,27 @@
   color: var(--ifm-color-primary-dark);
 }
 
-.projectCard {
+.Card {
   border: var(--docus-bd);
   padding: 12px;
   margin: 12px;
   border-radius: 0.5em;
   max-width: 150px;
+  min-width: 150px;
+  max-height: 140px;
+  min-height: 140px;
 }
 
-.projectBox {
+.Card img {
+  width: 64px;
+  margin: 10px;
+}
+
+.Card img.disabled {
+  filter: grayscale(100%);
+}
+
+.Box {
   display: flex;
   justify-content: center;
   align-items: center;

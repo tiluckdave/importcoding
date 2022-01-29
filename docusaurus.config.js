@@ -89,7 +89,11 @@ const config = {
         },
         googleAnalytics: {
           trackingID: 'G-18E35RFN70',
-          anonymizeIP: true,
+          anonymizeIP: false,
+        },
+        gtag: {
+          trackingID: 'G-18E35RFN70',
+          anonymizeIP: false,
         },
       },
     ],
