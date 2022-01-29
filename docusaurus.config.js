@@ -80,6 +80,7 @@ const config = {
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
         },
+        blog: false,
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
