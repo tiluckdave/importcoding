@@ -79,7 +79,7 @@ const config = {
         footer: {
           links: [
             {
-              label: 'Buy Me a Coffee',
+              label: '☕ Buy Me a Coffee',
               href: 'https://buymeacoffee.com/tiluckdave',
             },
           ],
