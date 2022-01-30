@@ -2,6 +2,8 @@
 title: Adding JavaScript
 ---
 
+import inArticleAd from 'lib/in-article-ad';
+
 # Adding JavaScript
 
 Through JavaScript we will be able to rotate the hands on a specific time interval. Lets dive into it.
@@ -15,18 +17,6 @@ const hr = document.querySelector('#hr');
 const mn = document.querySelector('#mn');
 const sc = document.querySelector('#sc');
 ```
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3981636219602601"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-3981636219602601"
-     data-ad-slot="4315065245"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 
 ## The `setInterval` function
 
@@ -54,18 +44,6 @@ setInterval(() => {
     let ss = now.getSeconds();
 }, 1000);
 ```
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3981636219602601"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-3981636219602601"
-     data-ad-slot="4315065245"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 
 ## Rotating the hands
 
@@ -110,18 +88,6 @@ setInterval(() => {
     sc.style.transform = `rotateZ(${ss}deg)`;   
 }, 1000);
 ```
-
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3981636219602601"
-     crossorigin="anonymous"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-3981636219602601"
-     data-ad-slot="4315065245"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 
 This is it! <br />
 Yes you heard it right, Our clock is now showing the correct time.
