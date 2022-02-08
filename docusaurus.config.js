@@ -83,7 +83,7 @@ const config = {
               href: 'https://buymeacoffee.com/tiluckdave',
             },
           ],
-          copyright: `Created with ❤️ by Tilak Dave from 🇮🇳.`,
+          copyright: `Created with ❤️ by Tilak Dave from 🇮🇳 &nbsp;&nbsp;|&nbsp;&nbsp; Domain sponsored by Shreyansh Dixit`,
         },
       }),
   presets: [
