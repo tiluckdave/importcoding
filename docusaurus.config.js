@@ -12,7 +12,7 @@ const config = {
   favicon: "img/favicon.ico",
   onBrokenLinks: "log",
   onBrokenMarkdownLinks: "log",
-  url: "https://importcoding.vercel.app",
+  url: "https://importcoding.com",
   baseUrl: "/",
   // organizationName: "amir2mi", // Usually your GitHub org/user name.
   // projectName: "flatifycss", // Usually your repo name.
