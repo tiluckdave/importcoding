@@ -105,11 +105,11 @@ const config = {
           priority: 0.5,
         },
         googleAnalytics: {
-          trackingID: 'G-18E35RFN70',
+          trackingID: 'G-N849W388XS',
           anonymizeIP: false,
         },
         gtag: {
-          trackingID: 'G-18E35RFN70',
+          trackingID: 'G-N849W388XS',
           anonymizeIP: false,
         },
       },
