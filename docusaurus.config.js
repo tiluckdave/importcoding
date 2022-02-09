@@ -123,7 +123,16 @@ const config = {
         path: './projects/email-extractor',
         routeBasePath: 'projects/email-extractor',
         sidebarPath: require.resolve('./projects/email-extractor/sidebars.js'),
-        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'python-turorial',
+        path: './learn/python',
+        routeBasePath: 'learn/python',
+        sidebarPath: require.resolve('./learn/python/sidebars.js'),
         showLastUpdateTime: true,
       },
     ],

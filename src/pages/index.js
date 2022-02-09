@@ -35,9 +35,9 @@ function ProjectCard(props) {
 function TutorialCard(props) {
   return (
     <div className="Card">
-      <img src={`${props.icon}`} className="disabled" alt={`${props.title} Logo`} />
-      <Link>
-        {props.linkName}
+      {props.disabled != false ? <img src={`${props.icon}`} className="disabled" alt={`${props.title} Logo`} /> : <img src={`${props.icon}`} alt={`${props.title} Logo`} />}
+      <Link to={props.disabled != false ? `` : `learn/${props.link}`}>
+        {props.disabled != false ? `Coming Soon` : `Learn`}
       </Link>
     </div >
   );
@@ -55,21 +55,23 @@ export default function Home() {
         <div className="container-md">
           <center>
             <Tabs>
+              <TabItem value="learn" label="Learn">
+                <p>Learn Languages and Frameworks</p>
+              <div id="projects" className="Box">
+                  <TutorialCard title="Python" link="python/home" icon="/img/lang-logo/python.png" disabled={false} />
+                  <TutorialCard title="HTML" icon="/img/lang-logo/html.png" />
+                  <TutorialCard title="CSS" icon="/img/lang-logo/css.png" />
+                  <TutorialCard title="JavaScript" icon="/img/lang-logo/js.png" />
+                  <TutorialCard title="C" icon="/img/lang-logo/c.png" />
+                  <TutorialCard title="C++" icon="/img/lang-logo/c++.png" />
+                  <TutorialCard title="Java" icon="/img/lang-logo/java.png" />
+                </div>
+              </TabItem>
               <TabItem value="projects" label="Projects">
+                <p>Upskill your coding skills with practical knowledge</p>
                 <div id="projects" className="Box">
                   <ProjectCard title="Analog + Digital Clock" language="JavaScript" link="analog-clock/setup" />
                   <ProjectCard title="Email Extractor" language="JavaScript" link="email-extractor/setup" /> 
-                </div>
-              </TabItem>
-              <TabItem value="tutorials" label="Tutorials">
-              <div id="projects" className="Box">
-                  <TutorialCard title="HTML" icon="/img/lang-logo/html.png" linkName="Coming Soon"/>
-                  <TutorialCard title="CSS" icon="/img/lang-logo/css.png" linkName="Coming Soon"/>
-                  <TutorialCard title="JavaScript" icon="/img/lang-logo/js.png" linkName="Coming Soon"/>
-                  <TutorialCard title="Python" icon="/img/lang-logo/python.png" linkName="Coming Soon"/>
-                  <TutorialCard title="C" icon="/img/lang-logo/c.png" linkName="Coming Soon"/>
-                  <TutorialCard title="C++" icon="/img/lang-logo/c++.png" linkName="Coming Soon"/>
-                  <TutorialCard title="Java" icon="/img/lang-logo/java.png" linkName="Coming Soon"/>
                 </div>
               </TabItem>
             </Tabs>

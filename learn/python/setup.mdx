@@ -1,0 +1,137 @@
+---
+title: Setup for Python
+---
+
+Python is available on a wide variety of platforms including Linux and Mac OS X. Let's understand how to set up our Python environment.
+
+## Environment Setup
+
+Open a terminal window and type `python` to find out if it is already installed and which version is installed.
+```bash
+python
+```
+
+## Getting Python
+
+The most up-to-date and current source code, binaries, documentation, news, etc., is available on the official website of Python [here](https://www.python.org/).
+
+You can download Python documentation from [python docs](https://www.python.org/docs) The documentation is available in HTML, PDF, and PostScript formats.
+
+## Installing Python
+
+Python distribution is available for a wide variety of platforms. You need to download only the binary code applicable for your platform and install Python.
+
+Here is a quick overview of installing Python on various platforms −
+
+### Unix and Linux Installation
+
+Here are the simple steps to install Python on Unix/Linux machine.
+
+- Open a Web browser and go to [python download](https://www.python.org/downloads/)
+- Follow the link to download zipped source code available for Unix/Linux.
+- Download and extract files.
+- Editing the Modules/Setup file if you want to customize some options.
+- run the below commands
+```bash
+$ ./configure script
+$ make
+$ make install
+```
+
+This installs Python at standard location `/usr/local/bin` and its libraries at `/usr/local/lib/pythonXX` where `XX` is the version of Python.
+
+### Windows Installation
+
+Here are the steps to install Python on Windows machine.
+
+- Open a Web browser and go to [python download](https://www.python.org/downloads/)
+- Follow the link for the Windows installer `python-XYZ.msi` file where `XYZ` is the version you need to install.
+- To use this installer `python-XYZ.msi`, the Windows system must support Microsoft Installer 2.0. Save the installer file to your local machine and then run it to find out if your machine supports MSI.
+- Run the downloaded file. This brings up the Python install wizard, which is really easy to use. Just accept the default settings, wait until the install is finished, and you are done.
+
+### Mac OS X Installation
+
+Recent Macs come with Python installed, but it may be several years out of date. See [download python for mac](http://www.python.org/download/mac/) for instructions on getting the current version along with extra tools to support development on the Mac.
+
+## Setting up PATH
+
+Programs and other executable files can be in many directories, so operating systems provide a search path that lists the directories that the OS searches for executables.
+
+The path is stored in an environment variable, which is a named string maintained by the operating system. This variable contains information available to the command shell and other programs.
+
+The **path** variable is named as PATH in Unix or Path in Windows (Unix is case sensitive; Windows is not).
+
+In Mac OS, the installer handles the path details. To invoke the Python interpreter from any particular directory, you must add the Python directory to your path.
+
+### Setting path at Unix/Linux
+
+To add the Python directory to the path for a particular session in Unix −
+
+- In the csh shell − type `setenv PATH "$PATH:/usr/local/bin/python"` and press Enter.
+- In the bash shell (Linux) − type `export PATH="$PATH:/usr/local/bin/python"` and press Enter.
+- In the sh or ksh shell − type `PATH="$PATH:/usr/local/bin/python"` and press Enter.
+
+:::info
+`/usr/local/bin/python` is the path of the Python directory
+:::
+
+### Setting path at Windows
+
+To add the Python directory to the path for a particular session in Windows −
+
+- At the command prompt − type `path %path%;C:\Python` and press Enter.
+
+:::info
+`C:\Python` is the path of the Python directory
+:::
+
+## Running Python
+
+There are three different ways to start Python −
+
+### Interactive interpreter
+
+You can start Python from Unix, DOS, or any other system that provides you a command-line interpreter or shell window.
+
+Enter **python** the command line.
+
+Start coding right away in the interactive interpreter.
+```bash
+$python # Unix/Linux
+
+or
+
+python% # Unix/Linux
+
+or
+
+C:> python # Windows/DOS
+```
+
+### Script from the Command-line
+
+A Python script can be executed at command line by invoking the interpreter on your application as in the Following
+
+```bash
+$python script.py # Unix/Linux
+
+or
+
+python% script.py # Unix/Linux
+
+or 
+
+C: >python script.py # Windows/DOS
+```
+
+### Integrated Development Environment (IDE)
+
+You can run Python from a Graphical User Interface (GUI) environment as well, if you have a GUI application on your system that supports Python.
+
+Few IDEs for Python are
+- Pycharm
+- Eclipse
+- IDLE
+- Jupyter Notebook
+- Spyder
+- etc
